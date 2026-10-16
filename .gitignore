@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local environment files (may contain private addresses). .env.example IS committed.
+.env
+.env.*
+!.env.example
+
+# Logs and editor files
+*.log
+npm-debug.log*
+.vscode/
+.idea/
+.DS_Store
