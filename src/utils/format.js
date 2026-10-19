@@ -1,6 +1,6 @@
 // Hebrew labels for the server's enum values, and display helpers.
 
-export const CATEGORY_LABELS = { Music: 'מוזיקה', StandUp: 'סטנדאפ', Theater: 'תיאטרון', Kids: 'ילדים' };
+export const CATEGORY_LABELS = { Music: 'מוזיקה', StandUp: 'הומור', Theater: 'תיאטרון', Kids: 'ילדים' };
 export const SHOW_STATUS_LABELS = { Draft: 'טיוטה', OnSale: 'במכירה', Cancelled: 'בוטלה' };
 export const ORDER_STATUS_LABELS = { Active: 'פעילה', Cancelled: 'בוטלה' };
 
