@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CATEGORY_LABELS, fromLocalInput, toLocalInput } from '../utils/format.js';
 
-const EMPTY = { title: '', artist: '', description: '', startsAt: '', ticketPrice: '', category: 'Music' };
+const EMPTY = { title: '', artist: '', description: '', startsAt: '', ticketPrice: '', category: 'Charity' };
 
 /** Create / edit form for a show (admin). The time is entered in local time and sent to the server in UTC. */
 export default function ShowForm({ show, onSubmit, onCancel, busy }) {
