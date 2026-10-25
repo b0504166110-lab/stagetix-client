@@ -10,7 +10,9 @@ export default function ConflictDialog({ error, seats, onRefresh }) {
   return (
     <div className="dialog-backdrop" role="alertdialog" aria-modal="true" aria-labelledby="conflict-title">
       <div className="dialog">
-        <div className="dialog-icon">😕</div>
+        <div className="dialog-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7.5v5.5" /><path d="M12 16.5h.01" /></svg>
+        </div>
         <h2 id="conflict-title">המקום נתפס!</h2>
         <p>
           אחד או יותר מהכיסאות שבחרת נתפס הרגע על ידי מישהי אחרת.
@@ -24,7 +26,7 @@ export default function ConflictDialog({ error, seats, onRefresh }) {
           HTTP 409 Conflict — {error.detail}
           {error.correlationId && <div>Correlation ID: <code>{error.correlationId}</code></div>}
         </div>
-        <button className="btn btn-primary" onClick={onRefresh} autoFocus>רענני את המפה ובחרי שוב</button>
+        <button className="btn btn-primary btn-block" onClick={onRefresh} autoFocus>רענני את המפה ובחרי שוב</button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-/** The hall: one button per seat. Green = available, grey = sold, blue = selected, red outline = just taken. */
+/** The hall: one button per seat. Teal = available, grey = sold, navy = selected, coral ring = just taken. */
 export default function SeatMap({ seats, selectedIds, takenIds = [], onToggle, disabled }) {
   const rows = [...new Set(seats.map((s) => s.row))].sort((a, b) => a - b);
 
@@ -20,17 +20,19 @@ export default function SeatMap({ seats, selectedIds, takenIds = [], onToggle, d
                 disabled={disabled || sold}
                 onClick={() => onToggle(seat.id)}
                 title={`שורה ${seat.row} כיסא ${seat.number}${sold ? ' (תפוס)' : ''}`}
+                aria-label={`שורה ${seat.row} כיסא ${seat.number}${sold ? ', תפוס' : ''}`}
                 aria-pressed={selected}
               >
                 {seat.number}
               </button>
             );
           })}
+          <span className="row-label">שורה {row}</span>
         </div>
       ))}
       <div className="legend">
         <span><i className="seat seat-free" /> פנוי</span>
-        <span><i className="seat seat-free seat-selected" /> נבחר</span>
+        <span><i className="seat seat-selected" /> הבחירה שלך</span>
         <span><i className="seat seat-sold" /> תפוס</span>
       </div>
     </div>

@@ -7,7 +7,12 @@ export const ORDER_STATUS_LABELS = { Active: 'פעילה', Cancelled: 'בוטל�
 export const formatDate = (iso) =>
   new Date(iso).toLocaleString('he-IL', { weekday: 'short', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
-export const formatPrice = (value) => `₪${Number(value).toLocaleString('he-IL')}`;
+export const formatDay = (iso) => new Date(iso).toLocaleDateString('he-IL', { day: 'numeric' });
+export const formatMonth = (iso) => new Date(iso).toLocaleDateString('he-IL', { month: 'long' });
+export const formatTime = (iso) => new Date(iso).toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' });
+export const formatLongDate = (iso) => new Date(iso).toLocaleDateString('he-IL', { weekday: 'long', day: 'numeric', month: 'long' });
+
+export const formatPrice =(value) => `₪${Number(value).toLocaleString('he-IL')}`;
 
 export const seatLabel = (seat) => `שורה ${seat.row} כיסא ${seat.number}`;
 
