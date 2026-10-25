@@ -13,7 +13,7 @@ export default function AdminShowsPage() {
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState('');
   const [editing, setEditing] = useState(null); // null = closed, {} = new, show = edit
-  const list = useApiData(() => showsApi.list({ page, pageSize: 10, status, sortBy: 'Date' }), [page, status]);
+  const list = useApiData(() => showsApi.list({ page, pageSize: 12, status, sortBy: 'Date' }), [page, status]);
   const { run, error, busy, message } = useAdminAction(list.reload);
 
   async function save(values) {

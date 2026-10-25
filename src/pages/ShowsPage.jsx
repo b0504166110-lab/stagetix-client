@@ -27,7 +27,7 @@ export default function ShowsPage() {
 
   const [sortBy, sortDirection] = sort.split('-');
   const { data, error, loading } = useApiData(
-    () => showsApi.list({ page, pageSize: 10, search, category, sortBy, sortDirection }),
+    () => showsApi.list({ page, pageSize: 12, search, category, sortBy, sortDirection }),
     [page, search, category, sort]
   );
 
